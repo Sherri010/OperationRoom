@@ -1,0 +1,17 @@
+<h3> Editing <%= @dev.first_name %>'s info </h3>
+
+<%= form_for @dev  do |f| %>
+  <p> Firstname: </p>
+  <%= f.text_field  :first_name  %>
+  <p> Lastname: </p>
+  <%= f.text_field  :last_name %>
+  <p> Email: </p>
+  <%= f.email_field :email %>
+  <p> Years of experience </p>
+  <%= f.number_field :years_experience %>
+  <%= f.submit "Update", class: "btn btn-primary" %>
+<% end %>
+
+<div>
+  <a href="/" class="btn btn-default">Cancel</a>
+</div>
