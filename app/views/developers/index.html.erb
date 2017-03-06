@@ -1,0 +1,13 @@
+<h2> Developers on the team </h2>
+
+<% @devs.each do |dev| %>
+  <h3> - <%= dev.first_name %> <%= dev.last_name %> </h3>
+  <p> Email: <%= dev.email %> </p>
+  <p>Years of experience: <%= dev.years_experience %> </p>
+  <%= link_to "current_projects" %>
+  <%= link_to "info", developer_url(dev.id) %>
+<% end %>
+
+
+<div>
+  <%= link_to "Add Developer to the team" , new_developer_url %>
