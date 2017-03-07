@@ -55,7 +55,7 @@ Create controller for developers and implement these functionalities:
  - See information about one specific developer
  - Add new developer to the team
 
-
+now update the `route.rb` file so anytime a user requests `localhost:3000`, it shows the list of all developers and their information.
  
 ####Step4: Add Partials
 Create a partial in your view to show  all developers information on the page. 
