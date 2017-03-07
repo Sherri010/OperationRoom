@@ -32,7 +32,7 @@ Create a rails app named OperationApp using postgresql.
 </details>
 
 
-#### Step2: Create Developer Model
+#### Step2: Create Developer Model 
 
 The Developer model should have the following properties:
 
@@ -54,13 +54,20 @@ Create controller for developers and implement these functionalities:
  - See full list of all developers 
  - See information about one specific developer
  - Add new developer to the team
+
+
+ 
+####Step4: Add Partials
+Create a partial in your view to show  all developers information on the page. 
+
+#### Strech goal:
+
+Add the following functionalities to your Developers controller:
+
  - edit/update developer information
  - Remove developer from the team
 
- 
-Test your controller and views before moving to the next section.
-
-####Step4: Create Project Model
+####Step5: Create Project Model
 
 The Project model should have the following properties:
 
@@ -73,19 +80,28 @@ deadline: date
 ``` 
 Don't forgter to run the migration and test the new model in rails console.
 
-####Step5: Associations
+####Step6: Associations
 ![](diagram.png)
 
-Your team is structure allows more than one developer on one project but there should atleast be one person assign to any project saved in your database.
+Your team is structure allows more than one developer on one project but there should atleast be one assigned to any project saved in your database.
 
-How do you see the association between Developer and Project model?
+How do you see the association between Developer and Project model? create the necessary migrations to add the associations to your models. 
+
+Update the `route.rb` to reflect the changes and then run `rake routes` to see all the end points. 
+
+####Bounes:
 
 
+- Add navbar as a partial and include "add new developer" option in it
+- Finish all CRUD actions for developers
+- Add a Client model to the app. Each project should have one client and atleast one developer. 
+- Create all CRUD actions for client controller as well.
+- Make it look nice! add some styling or JavaScript to this project to enhance the UI.
 
-
-
-------------------
  
+
+
+
 Creating an app
 creating a model
 creating migrations
