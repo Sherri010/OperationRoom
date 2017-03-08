@@ -44,7 +44,7 @@ class DevelopersController < ApplicationController
   end
 
   def destroy
-    @dev.find(params[:id])
+    @dev= Developer.find(params[:id])
     if @dev.destroy
       flash[:success]="Successfully removed developer from the team"
       redirect_to developers_url

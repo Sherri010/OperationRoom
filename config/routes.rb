@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   # end
 
   get "/projects/:project_id/developers", to: "developers#index" ,as: "devsassigned"
-  get "/projects/:project_id/developers/edit", to: "assignments#new", as: "assginnew"
-  post "/projects/:project_id/developers/edit", to: "assignments#create" , as:"assigncreate"
+  get "/projects/:project_id/assignment/new", to: "assignments#new", as: "assginnew"
+
 end

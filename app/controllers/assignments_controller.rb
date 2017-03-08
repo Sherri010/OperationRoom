@@ -23,11 +23,10 @@ class AssignmentsController < ApplicationController
 
 
   def create
-
     @assign= Assignment.new(assign_params)
     if @assign.save
        flash[:success]="New assignment created"
-       redirect_to developers_url(@assign.project_id)
+       redirect_to devsassigned_path(@assign.project_id)
      else
        flash[:error]="Failed creating the assignment"
        redirect_to :back
