@@ -93,7 +93,7 @@ How do you see the association between Developer and Project model?
 Yes! many-to-many. As you know, many-to-many associations are built using join table. Create a model for the joined table and controller to implement this association. 
 
 
-## Step7: CURD projects and assignments
+## Step7: CRUD projects and assignments
 first start by creating a few projects in rails console and add developers to it. Then using the controllers you created before plan how you are going to have this process avaibale through the UI. 
 
 What are the things to consider? Can you identify any challanges? 
