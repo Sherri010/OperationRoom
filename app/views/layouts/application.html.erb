@@ -11,6 +11,8 @@
 
   <body>
     <div class="container">
+      <%= flash[:success] %>
+      <%= flash[:error] %>
     <%= render "partials/navbar" %>
     <%= yield %>
     <%= render "partials/footer" %>

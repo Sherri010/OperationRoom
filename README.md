@@ -2,7 +2,7 @@
 #  Controllroom App
 ### Why is this important?
 
-This lab is a great opportunety for you to create a useful rails app and experiemnet with active records and associations. 
+This lab is a great opportunity for you to create a useful rails app and experiment with active records and associations. 
 
 
 ### What are the objectives?
@@ -15,8 +15,8 @@ This lab is a great opportunety for you to create a useful rails app and experie
   - Practise how to approach many-to-many associations
 
 
-## Goal
-You are managing many developers on your team and each one is working with a different client. You, as the team manager, are going to create a tool for yourself to keep track of your developers and projects. You will be using ruby on rails and postgresql to create this app. 
+## Goals for this app
+You are managing many developers on your team and each one is working on different projects. You, as the team manager, are going to create a tool for yourself to keep track of your developers and projects. You will be using ruby on rails and postgresql to create this app. 
 
 Follow the instruction and make your team proud! 
 
@@ -27,7 +27,7 @@ Follow the instruction and make your team proud!
 ## Step1: Create Controllroom App
 
 Create a rails app named Controllroom using postgresql.
-<details><summary>Can't remember the command?</summary>
+<details><summary>Can't remember the rails command?</summary>
  ` $rails new Controllroom -T -d postgresql `
 </details>
 
@@ -44,9 +44,9 @@ github_url: string
 years_experience: integer
 
 ```
-create this model using rails command and dont forget to ` rails db:migrate `.
+create this model using rails command and don’t forget to ` rails db:migrate `.
 
-Now jump to the rails cosole and test your model. Create an few developers to use in the future steps.
+Now jump to the rails console and test your model. Create an few developers to use in the future steps.
 
 ## Step3: Create Developers Controller
 Create the controller for developers and implement these functionalities:
@@ -60,7 +60,7 @@ now update the `route.rb` file so anytime a user requests `localhost:3000`, it s
 ## Step4: Add Partials
 Create a partial in your view to show  all developers information on the page. 
 
-#### Strech goal:
+#### Stretch goal:
 
 Add the following functionalities to your Developers controller:
  
@@ -78,13 +78,13 @@ github_url: string
 deadline: date
 
 ``` 
-Don't forgter to run the migration and test the new model in rails console.
+Don't forget to run the migration and test the new model in rails console.
 
 ## Step6: Associations
 <img src="diagram.png" style="width:300px;">
 <img src="diagram2.png" style="width:300px;">
 
-Your team is structure allows for:
+Your team is structure allows:
  
  - Each project to have multiple developers
  - Each developer to be assigned to more than one project
@@ -92,18 +92,16 @@ Your team is structure allows for:
 How do you see the association between Developer and Project model? 
 Yes! many-to-many. As you know, many-to-many associations are built using join table. Create a model for the joined table and controller to implement this association. 
 
-
-## Step7: CRUD projects and assignments
-first start by creating a few projects in rails console and add developers to it. Then using the controllers you created before plan how you are going to have this process avaibale through the UI. 
-
-What are the things to consider? Can you identify any challanges? 
+Now start by creating a few projects in rails console and add developers to it. Then using the controllers you created before, plan how you are going to have this process available through the UI. 
 
 
 ####Bounes:
 - Add navbar as a partial and include "add new developer" option in it
 - Finish all CRUD actions for developers
-- Add a Client model to the app. Each project should have one client and atleast one developer. 
+- Add a Client model to the app. Each project should have one client and at least one developer. 
 - Create all CRUD actions for client controller as well.
 - Make it look nice! add some styling or JavaScript to this project to enhance the UI.
 
  
+
+

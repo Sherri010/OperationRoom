@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     if @project.save
       flash[:success] = "Successfully added the new project"
-      redirect_to developer_url
+      redirect_to projects_url
     else
       flash[:error]="Failed at adding the new project"
       redirect_to :back

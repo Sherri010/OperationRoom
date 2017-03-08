@@ -5,6 +5,7 @@
    <p><b>Project Name: </b><%= project.name %></p>
    <p><b>Description:</b> <%= project.desc %></p>
    <p><b>Deadline: </b><%= project.deadline %> </p>
-   <%= link_to "assigned Devs" ,devsassigned_url(project.id) %>
+   <%= link_to "assigned Devs" ,devsassigned_url(project.id) %> |
+   <%= link_to "+dev to this project" , assginnew_path(project.id) %>
    <hr>
 <% end %>

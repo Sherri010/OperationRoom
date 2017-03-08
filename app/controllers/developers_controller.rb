@@ -15,7 +15,7 @@ class DevelopersController < ApplicationController
       end
   end
   def index
-    @devs = Developer.all
+    @devs = params[:project_id] ? Project.find(params[:project_id]).developers : Developer.all
   end
 
   def show

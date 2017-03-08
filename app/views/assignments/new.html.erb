@@ -1,0 +1,16 @@
+<h3> Adding new developer to <%= @project.name %></h3>
+
+
+<% @assign_devs.each do |ad| %>
+  <%= ad.first_name %>
+  <%= ad.last_name %>
+<% end %>
+
+
+<%= form_for @assign do |f| %>
+  <p> Project id: </p>
+  <%= f.number_field  :project_id , :value =>@project.id %>
+  <p> Developer id: </p>
+  <%= f.number_field  :developer_id  %>
+  <%= f.submit "Add new developer", class: "btn btn-primary" %>
+<% end %>

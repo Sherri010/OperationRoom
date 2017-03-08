@@ -10,13 +10,34 @@ class AssignmentsController < ApplicationController
   end
 
   def show
-    @assign = Assignment.where(project_id:params[:id])
     @project = Project.find(params[:id])
-    @devs =[]
-    @assign.each do |a|
-      @devs << Developer.find(a.developer.id)
-    end
+    @devs = @project.developers
+  end
 
+  def new
+    @assign = Assignment.new
+    @all_devs = Developer.all
+    @project = Project.find(params[:project_id])
+    @assign_devs = @project.developers
+  end
+
+
+  def create
+
+    @assign= Assignment.new(assign_params)
+    if @assign.save
+       flash[:success]="New assignment created"
+       redirect_to developers_url(@assign.project_id)
+     else
+       flash[:error]="Failed creating the assignment"
+       redirect_to :back
+     end
+  end
+
+  private
+
+  def assign_params
+    params.require(:assignment).permit(:developer_id,:project_id)
   end
 
 end
