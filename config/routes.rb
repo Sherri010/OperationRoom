@@ -3,5 +3,8 @@ Rails.application.routes.draw do
  root to: 'developers#index'
   resources :developers
   resources :projects
-  resources :assignment
+  resources :assignments
+
+  get "/assignments/project/:id", to: "assignments#show" , as:"devsassigned"
+
 end

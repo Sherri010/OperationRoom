@@ -1,0 +1,4 @@
+<h3> Devs assigned to <%= @project.name %> project </h3>
+<% @devs.each do |d| %>
+  <p> Name: <%= d.first_name %> <%=d.last_name %> </p>
+<% end %>

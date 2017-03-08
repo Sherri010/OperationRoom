@@ -1,0 +1,10 @@
+<h3> All Assignments </h3>
+<hr>
+<% @assign_detail.each do |ad| %>
+   <p><b>Project Id:</b><%= ad[:project].id %></p>
+   <p><b>Project Name: </b><%= ad[:project].name %></p>
+   <p><b>Description:</b> <%= ad[:project].desc %></p>
+   <p><b>Deadline: </b><%= ad[:project].deadline %> </p>
+   <p><b>Developer</b><%= ad[:developer].first_name %><%= ad[:developer].last_name %></p>
+   <hr>
+<% end %>

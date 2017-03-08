@@ -25,6 +25,7 @@ nav{
   display:inline;
   float:right;
   padding-right:10px;
+  text-decoration: none;
 }
 footer{
   padding-top:180px;
