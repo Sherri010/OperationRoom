@@ -1,5 +1,5 @@
 
-# Operations
+#  Controllroom App
 ### Why is this important?
 
 This lab is a great opportunety for you to create a useful rails app and experiemnet with active records and associations. 
