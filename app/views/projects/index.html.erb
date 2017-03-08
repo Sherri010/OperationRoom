@@ -1,0 +1,9 @@
+<h3> All Porjects </h3>
+<hr>
+<% @projects.each do |project| %>
+   <p><b>Project Id:</b><%= project.id %></p>
+   <p><b>Project Name: </b><%= project.name %></p>
+   <p><b>Description:</b> <%= project.desc %></p>
+   <p><b>Deadline: </b><%= project.deadline %> </p>
+   <hr>
+<% end %>

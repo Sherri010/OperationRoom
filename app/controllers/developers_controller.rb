@@ -5,25 +5,30 @@ class DevelopersController < ApplicationController
     @dev = Developer.new
   end
   def create
-    @dev = Developer.new(developer_params)
-    if @dev.save
-      flash[:success]="New member added"
-      redirect_to developers_url
-    else
-      flash[:error]="Fialed adding new member ... please try again"
-      redirect_to :back
-    end
+      @dev = Developer.new(developer_params)
+      if @dev.save
+        flash[:success]="New member added"
+        redirect_to developers_url
+      else
+        flash[:error]="Fialed adding new member ... please try again"
+        redirect_to :back
+      end
   end
   def index
     @devs = Developer.all
   end
 
   def show
-   @dev = Developer.find(params[:id])
+     @dev = Developer.find(params[:id])
+     assignments = Assignment.where(developer_id:@dev.id)
+     @projects =[]
+     assignments.each do |assign|
+       @projects << Project.find(assign.project_id)
+     end
   end
 
   def edit
-    @dev = Developer.find(params[:id])
+     @dev = Developer.find(params[:id])
   end
 
   def update

@@ -83,11 +83,13 @@ Don't forgter to run the migration and test the new model in rails console.
 ####Step6: Associations
 ![](diagram.png)
 
-Your team is structure allows more than one developer on one project but there should atleast be one assigned to any project saved in your database.
+Your team is structure allows for:
+ 
+ - Each project to have multiple developers
+ - Each developer to be assigned to more than one project
 
-How do you see the association between Developer and Project model? create the necessary migrations to add the associations to your models. 
+How do you see the association between Developer and Project model? create the necessary changes ( or migrations ) to add the associations to your models. 
 
-Update the `route.rb` to reflect the changes and then run `rake routes` to see all the end points. 
 
 ####Bounes:
 

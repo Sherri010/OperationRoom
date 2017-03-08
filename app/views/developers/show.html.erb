@@ -1,4 +1,13 @@
 <h3> <%= @dev.first_name %>'s Profile </h3>
+<p>Years of experience: <%= @dev.years_experience %> </p>
 
+<h4> Project List </h4>
+<ol>
+<% @projects.each do |p| %>
+<li>  <p>Name: <%= p.name %> </p>
+  <p>Desc: <%= p.desc %> </p>
+</li>
+<% end %>
+</ol>
 <%= link_to "Edit info", edit_developer_url(@dev.id) %>
 <%= link_to "Remove from the team", developer_url(@dev.id) , method: :delete %>
